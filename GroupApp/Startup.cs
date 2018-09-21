@@ -31,7 +31,7 @@ namespace GroupApp
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             var Dbconfig = Configuration.Get<DBconfigClass>();
             var connectionstring = Configuration.GetConnectionString("GroupAppDb");
-            var format = string.Format(connectionstring, Dbconfig.Username, Dbconfig.Password);
+            var format = string.Format(connectionstring, Dbconfig.Username, Dbconfig.SQLPassword);
 
             //services.AddDbContext<GroupAppContext>(options =>
             //        options.UseSqlServer(Configuration.GetConnectionString("CentralLocationsContext")));
