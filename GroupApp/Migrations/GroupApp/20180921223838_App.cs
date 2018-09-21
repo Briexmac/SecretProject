@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace GroupApp.Migrations
+namespace GroupApp.Migrations.GroupApp
 {
-    public partial class InitialMigration : Migration
+    public partial class App : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

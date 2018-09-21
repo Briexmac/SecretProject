@@ -18,7 +18,6 @@ namespace GroupApp.Controllers
         }
 
         // GET: NorthLocations
-        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             return View(await _context.NorthLocations.ToListAsync());
@@ -86,9 +85,9 @@ namespace GroupApp.Controllers
         // POST: NorthLocations/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
+        //[Authorize]
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Establishment,Address,DateTime,Thoughts")] NorthLocations northLocations)
         {
             if (id != northLocations.Id)
@@ -138,9 +137,9 @@ namespace GroupApp.Controllers
         }
 
         // POST: NorthLocations/Delete/5
-        [Authorize]
+        //[Authorize]
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var northLocations = await _context.NorthLocations.FindAsync(id);
