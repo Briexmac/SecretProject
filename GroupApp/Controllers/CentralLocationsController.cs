@@ -66,7 +66,7 @@ namespace GroupApp.Controllers
         }
 
         // GET: CentralLocations/Edit/5
- 
+
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id)
         {
@@ -120,7 +120,7 @@ namespace GroupApp.Controllers
         }
 
         // GET: CentralLocations/Delete/5
-      
+
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
